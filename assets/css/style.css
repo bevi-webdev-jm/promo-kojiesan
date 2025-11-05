@@ -172,3 +172,15 @@ header .text-white {
     scrollbar-width: thin;
     scrollbar-color: rgba(220, 38, 38, 0.9) #f3f4f6;
 }
+
+/* keep small and scoped: adjust body top padding to header height on small screens */
+@media (min-width: 768px) {
+    body {
+        padding-top: 4rem;
+    } /* matches h-16 */
+}
+@media (max-width: 767px) {
+    body {
+        padding-top: 4rem;
+    }
+}
