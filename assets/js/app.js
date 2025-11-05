@@ -3,6 +3,41 @@ AOS.init({
     once: true, // animations only fire once
 });
 
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                // Deeper, richer red for primary branding (used instead of default red-700)
+                "brand-red": {
+                    50: "#FEF2F2",
+                    100: "#FEE2E2",
+                    200: "#FECACA",
+                    300: "#FCA5A5",
+                    400: "#F87171",
+                    500: "#EF4444",
+                    600: "#DC2626",
+                    700: "#B91C1C", // Used for main accents
+                    800: "#991B1B", // Used for text/dark hover
+                    900: "#7F1D1D",
+                },
+            },
+        },
+    },
+};
+
+(function () {
+    const btn = document.getElementById("nav-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const hamburger = document.getElementById("hamburger");
+    const closeIcon = document.getElementById("close-icon");
+    btn?.addEventListener("click", function () {
+        const isHidden = menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isHidden));
+        hamburger.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+    });
+})();
+
 // Countdown Timer Functionality
 function updateCountdown() {
     const now = new Date();
