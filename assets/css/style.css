@@ -1,0 +1,174 @@
+/* Glass-like design styles */
+body {
+    /* replace the placeholder with a CSS variable-based gradient */
+    background: linear-gradient(
+        var(--bg-angle, 135deg),
+        #ebe5de 0%,
+        #ecefec 100%
+    );
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+}
+
+.mechanic-card,
+.bg-white {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Enhanced hover effect for glass cards */
+.mechanic-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+.mechanic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px 0 rgba(31, 38, 135, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+/* Smooth scroll for internal links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom styles for FAQ details/summary */
+details {
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "➕";
+    float: right;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+details[open] summary::after {
+    content: "➖";
+    transform: rotate(180deg);
+}
+
+/* Header glass effect */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer glass effect */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Text colors for glass theme - improved readability */
+.text-gray-900,
+.text-gray-700,
+.text-gray-800,
+.text-gray-600 {
+    color: #1a1a1a !important;
+}
+
+.text-red-700 {
+    color: #dc2626 !important;
+}
+
+.text-red-800 {
+    color: #991b1b !important;
+}
+
+.text-yellow-800,
+.text-yellow-900 {
+    color: #92400e !important;
+}
+
+.text-gray-800 {
+    color: #1f2937 !important;
+}
+
+.text-orange-800,
+.text-orange-900 {
+    color: #9a3412 !important;
+}
+
+/* Special handling for header text */
+header .text-white {
+    color: #ffffff !important;
+}
+
+/* Banner text remains white for contrast */
+#banner .text-white,
+#banner .text-red-100 {
+    color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .mechanic-card h3 {
+        font-size: 1rem;
+    }
+    .mechanic-card h3 span {
+        font-size: 1.25rem;
+    }
+}
+
+.table-scroll {
+    overflow: auto;
+    max-height: 14rem;
+}
+@media (min-width: 768px) {
+    .table-scroll {
+        max-height: 22rem;
+    }
+}
+
+/* WebKit */
+.table-scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.table-scroll::-webkit-scrollbar-track {
+    background: #f3f4f6; /* gray-100 */
+    border-radius: 9999px;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+    background: rgba(220, 38, 38, 0.9); /* red-600 */
+    border-radius: 9999px;
+    border: 2px solid #f3f4f6; /* creates padding effect */
+}
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgb(220, 38, 38);
+}
+
+/* Firefox */
+.table-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(220, 38, 38, 0.9) #f3f4f6;
+}
