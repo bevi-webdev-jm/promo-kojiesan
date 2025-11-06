@@ -361,13 +361,86 @@ include('arrays.php');
                     </div>
                 </div>
 
-                <div class="w-full mb-4">
+                <!-- <div class="w-full mb-4">
                     <div class="relative overflow-hidden rounded-xl bg-gray-50 border-2 border-gray-300 shadow-lg h-100 md:h-full flex items-center justify-center"> 
                         <img
                             src="./assets/images/prizes.png"
                             alt="Promo prizes"
                             class="w-full h-full p-2 object-contain"
                         />
+                    </div>
+                </div> -->
+
+                <div class="rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white">
+                    <div class="overflow-x-auto">
+                        <table role="table" class="min-w-full table-auto text-sm text-left text-gray-700">
+                            <thead>
+                                <tr>
+                                    <th colspan="6" class="bg-red-700 text-white px-6 py-4 text-xl font-extrabold text-center tracking-wider">
+                                        GCASH INSTANT PRIZES
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <?php foreach($promo_period_arr as $title => $val) { ?>
+                                <!-- Group title -->
+                                <thead class="bg-white sticky top-0 z-10">
+                                    <tr>
+                                        <th colspan="6" class="bg-gray-50 sticky top-0 z-10 text-brand-red-700 text-center">
+                                            <?php echo htmlspecialchars($title); ?>
+                                        </th>
+                                    </tr>
+
+                                    <!-- Column headers -->
+                                    <tr class="bg-gray-100 border-b border-gray-200">
+                                        <th class="px-4 py-3 text-xs font-semibold text-gray-600 whitespace-nowrap">Month No</th>
+                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">No. of Winners</th>
+                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Promo Period</th>
+                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Validation Date</th>
+                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Draw Date</th>
+                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Announcement Date (Social)</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="divide-y divide-gray-100">
+                                    <?php foreach($val as $row) { ?>
+                                        <tr class="hover:bg-red-50/40 transition">
+                                            <td class="px-4 py-3 text-center font-medium text-sm"><?php echo htmlspecialchars($row['month']); ?></td>
+                                            <td class="px-4 py-3 text-center"><?php echo htmlspecialchars($row['winners']); ?></td>
+                                            <td class="px-4 py-3"><?php echo htmlspecialchars($row['period']); ?></td>
+                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['validation_date']); ?></td>
+                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['draw_date']); ?></td>
+                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['announcement_date']); ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            <?php } ?>
+
+                            <!-- Grand prize footer -->
+                            <tfoot>
+                                <tr>
+                                    <th colspan="6" class="bg-blue-700 text-white px-4 py-3 text-lg text-center font-extrabold tracking-wider">
+                                        GRAND PRIZE
+                                    </th>
+                                </tr>
+                                <tr class="bg-blue-50 border-t border-b border-blue-200">
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">No. of Winners</th>
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Promo Period</th>
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Validation Date</th>
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Draw Date</th>
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Announcement Date (Social)</th>
+                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Notes</th>
+                                </tr>
+                                <tr class="bg-blue-50/80">
+                                    <td class="px-4 py-3 text-center font-bold">2</td>
+                                    <td class="px-4 py-3 text-center">Nov 1 - Jan 15</td>
+                                    <td class="px-4 py-3 text-center">16 Jan</td>
+                                    <td class="px-4 py-3 text-center">17 Jan</td>
+                                    <td class="px-4 py-3 text-center">17 Jan</td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">Winners announced on official social channels</td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
 
@@ -396,7 +469,7 @@ include('arrays.php');
                         class="space-y-4"
                     >
                         <?php
-                            foreach($how_to_join_arr as $num => $val) {
+                        foreach($how_to_join_arr as $num => $val) {
                         ?>
                             <li class="flex gap-4 items-start p-4 border border-gray-200 rounded-lg bg-gray-50 hover:shadow-md hover:border-brand-red-300 transition duration-300">
                                 <div class="flex-shrink-0">

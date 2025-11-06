@@ -154,7 +154,7 @@ $prizes_arr = [
         'One Thousand (1,000) winners of a One Hundred pesos (100 PHP) GCash Voucher',
         'One Thousand (1,000) winners of a Two Hundred pesos (200 PHP) GCash',
         'One Thousand (1,000) winners of a Three Hundred pesos (300 PHP) GCash Voucher',
-        'One Thousand (500) winners of a Five Hundred pesos (500 PHP) GCash Voucher'
+        'Five Hundred (500) winners of a Five Hundred pesos (500 PHP) GCash Voucher'
     ],
     'BEVi PH Online Stores Electronic Discount Voucher' => [
         'Five Hundred (500) winners of Shopee Discount Code Voucher',
@@ -229,4 +229,163 @@ $control_measures_arr = [
     2 => 'BEVi Beauty Elements Ventures Inc. accepts no responsibility for any late, lost, misdirected, or undelivered mail. To the extent permitted by law, BEVi Beauty Elements Ventures Inc. shall not be liable for any technical issues or malfunctions of telephone networks or lines, computer online systems, servers, providers, computer equipment, software, or any technical problems or traffic congestion on the Internet or on any website, or any combination thereof. This includes, but is not limited to, any injury or damage to participants or any other person’s computer related to or resulting from participation in this Promotion.',
     3 => 'BEVi Beauty Elements Ventures Inc. shall not be liable for any loss or damage whatsoever suffered or incurred (including, without limitation, indirect, incidental, special, or consequential loss), or for any personal injury suffered or sustained, arising out of or in connection with participation in this Promotion, except for any liability that cannot be excluded by law.',
     4 => 'BEVi Beauty Elements Ventures Inc. reserves the right to verify all potential winners before awarding any prize. Fraudulent transactions will be void.',
-]; 
+];
+
+$promo_period_arr = [
+    '50PHP, 100PHP, 200PHP, 300PHP GCASH WINNERS' => [
+        [
+            'month' => 1,
+            'winners' => 334,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 333,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 333,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+    '500PHP GCASH INSTANT PRIZE WINNERS' => [
+        [
+            'month' => 1,
+            'winners' => 167,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 167,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 166,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+    '500PHP E-VOUCHER CODE FOR SHOPEE (INSTANT PRIZE WINNERS)' => [
+        [
+            'month' => 1,
+            'winners' => 167,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 167,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 166,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+    '500PHP E-VOUCHER CODE FOR LAZADA (INSTANT PRIZE WINNERS)' => [
+        [
+            'month' => 1,
+            'winners' => 167,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 167,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 166,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+    '500PHP E-VOUCHER CODE FOR TIKTOK (INSTANT PRIZE WINNERS)' => [
+        [
+            'month' => 1,
+            'winners' => 167,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 167,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 166,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+    'BEVi PRODUCTS (INSTANT PRIZE WINNERS)' => [
+        [
+            'month' => 1,
+            'winners' => 334,
+            'period' => 'Nov 15 - 30',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Dec'
+        ],
+        [
+            'month' => 2,
+            'winners' => 333,
+            'period' => 'Dec 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '5-Jan'
+        ],
+        [
+            'month' => 3,
+            'winners' => 333,
+            'period' => 'Jan 1 - 15',
+            'validation_date' => 'Real Time',
+            'draw_date' => 'Real Time',
+            'announcement_date' => '19-Jan'
+        ],
+    ],
+];
