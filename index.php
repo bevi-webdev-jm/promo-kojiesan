@@ -9,7 +9,14 @@ include('arrays.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Holiday Millionaire</title>
         <script src="https://cdn.tailwindcss.com"></script>
-
+        <!-- favicons -->
+        <link rel="icon" href="./assets/images/bevi-logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/bevi-logo.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/bevi-logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/bevi-logo.png" />
+        <link rel="mask-icon" href="./assets/images/bevi-logo.png" color="#b91c1c" />
+        <meta name="msapplication-TileColor" content="#b91c1c" />
+        <meta name="theme-color" content="#b91c1c" />
 
         <link
             rel="stylesheet"
@@ -22,7 +29,9 @@ include('arrays.php');
 
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body class=" font-sans pt-20 bg-gray-50"> <header class="bg-brand-red-800 fixed top-0 w-full z-50 shadow-2xl"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <body class=" font-sans pt-20 bg-gray-50"> 
+        <header class="bg-brand-red-800 fixed top-0 w-full z-50 shadow-2xl"> 
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-16">
                     <a href="#" class="flex items-center gap-3">
                         <img
@@ -30,8 +39,7 @@ include('arrays.php');
                             alt="kojie.san"
                             class="h-10 w-auto"
                         />
-                        <span
-                            class="text-white text-xl sm:text-2xl font-black tracking-widest uppercase" >
+                        <span class="hidden md:inline-block text-white text-xl sm:text-2xl font-black tracking-widest uppercase">
                             HOLIDAY MILLIONAIRE
                         </span>
                     </a>
@@ -134,14 +142,16 @@ include('arrays.php');
 
         </header>
 
-         <section id="terms-banner" class="mb-8 w-full" style="margin-top: -15px;"> <div class="w-full overflow-hidden bg-brand-red-700/50"> <img
+        <section id="terms-banner" class="mb-8 w-full" style="margin-top: -15px;"> 
+            <div class="w-full overflow-hidden bg-brand-red-700/50"> <img
                     src="./assets/images/Terms & Conditions Header.png"
                     alt="Terms and Conditions header"
-                    class="w-full h-[40vh] sm:h-[56vh] md:h-[60vh] object-cover object-center" />
+                    class="h-full w-full  object-cover object-center" />
             </div>
         </section>
         
-        <main class="max-w-4xl mx-auto pb-16 px-4 sm:px-6 lg:px-8"> <section
+        <main class="max-w-4xl mx-auto pb-16 px-4 sm:px-6 lg:px-8"> 
+            <section
                 id="introduction"
                 class="mb-10 p-6 bg-gradient-to-r from-brand-red-700 to-brand-red-500 text-white rounded-xl shadow-2xl flex flex-col md:flex-row items-center gap-6 transform -translate-y-4" data-aos="fade-up"
                 data-aos-once="true"
@@ -178,7 +188,7 @@ include('arrays.php');
                     </div>
                 </div>
 
-                <div class="w-40 h-40 md:w-56 md:h-56 flex-shrink-0 opacity-80"> <img
+                <div class="w-90 h-40 md:w-80 md:h-56 flex-shrink-0 opacity-80"> <img
                         src="./assets/images/Terms & Conditions Header.png"
                         alt="Holiday Millionaire illustration"
                         class="w-full h-full object-contain"
@@ -191,10 +201,9 @@ include('arrays.php');
                 class="mt-10 mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100" data-aos="fade-right"
                 data-aos-once="true"
             >
-                <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3"> <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-red-50 text-brand-red-700 flex-shrink-0"> <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10M7 3h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-                        </svg>
+                <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3"> 
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                        <img src="./assets/images/icons/criteria.png" alt="criteria">
                     </div>
 
                     <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
@@ -206,7 +215,8 @@ include('arrays.php');
                     <?php 
                         foreach($criteria_arr as $num => $criteria) {
                     ?>
-                        <li class="flex gap-4 items-start p-4 border border-gray-100 rounded-lg hover:shadow-md hover:border-brand-red-200 transition duration-300"> <div class="flex-shrink-0">
+                        <li class="flex gap-4 items-start p-4 border border-gray-100 rounded-lg hover:shadow-md hover:border-brand-red-200 transition duration-300"> 
+                            <div class="flex-shrink-0">
                                 <div class="w-8 h-8 rounded-full bg-brand-red-700 text-white font-bold flex items-center justify-center shadow-md"><?php echo $num; ?></div>
                             </div>
                             <div class="text-base text-gray-800 flex-1">
@@ -225,16 +235,17 @@ include('arrays.php');
             >
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5H19M7 13v8a2 2 0 002 2h10a2 2 0 002-2v-3" />
-                        </svg>
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                            <img src="./assets/images/icons/box.png" alt="products">
+                        </div>
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Participating Products
                         </h2>
                     </div>
                 </div>
 
-                <h4 class="text-base text-gray-700 font-semibold mb-4">List of Participating Kojie San Product(s)</h4> <div class="mb-6">
+                <h4 class="text-base text-gray-700 font-semibold mb-4">List of Participating Kojie San Product(s)</h4> 
+                <div class="mb-6">
                     <label for="product-search" class="sr-only">Search products</label>
                     <input
                         id="product-search"
@@ -244,10 +255,12 @@ include('arrays.php');
                     />
                 </div>
 
-                <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md"> <div class="table-scroll">
+                <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md"> 
+                    <div class="table-scroll">
                         <div class="max-h-100 overflow-auto">
                             <table id="products-table" class="min-w-full text-sm text-left text-gray-700">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-100 font-bold sticky top-0 z-10 border-b-2 border-brand-red-300"> <tr>
+                                <thead class="text-xs text-gray-700 uppercase bg-gray-100 font-bold sticky top-0 z-10 border-b-2 border-brand-red-300"> 
+                                    <tr>
                                         <th class="py-3 px-4 whitespace-nowrap sticky top-0 bg-gray-100 z-10">Product</th>
                                         <th class="py-3 px-4 whitespace-nowrap sticky top-0 bg-gray-100 z-10">Size</th>
                                     </tr>
@@ -257,7 +270,8 @@ include('arrays.php');
                                         $product_name = isset($product['product']) ? $product['product'] : '';
                                         $product_size = isset($product['size']) ? $product['size'] : '';
                                     ?>
-                                        <tr class="bg-white border-b border-gray-100 hover:bg-brand-red-50/50 transition duration-150" data-product="<?php echo htmlspecialchars(strtolower($product_name)); ?>" data-size="<?php echo htmlspecialchars(strtolower($product_size)); ?>"> <td class="py-3 px-4 font-medium">
+                                        <tr class="bg-white border-b border-gray-100 hover:bg-brand-red-50/50 transition duration-150" data-product="<?php echo htmlspecialchars(strtolower($product_name)); ?>" data-size="<?php echo htmlspecialchars(strtolower($product_size)); ?>"> 
+                                            <td class="py-3 px-4 font-medium">
                                                 <?php echo htmlspecialchars($product_name); ?>
                                             </td>
                                             <td class="py-3 px-4 whitespace-nowrap">
@@ -272,6 +286,8 @@ include('arrays.php');
                 </div>
             </section>
 
+            
+
             <section
                 id="stores"
                 class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100"
@@ -280,9 +296,9 @@ include('arrays.php');
             >
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5H19M7 13v8a2 2 0 002 2h10a2 2 0 002-2v-3" />
-                        </svg>
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                            <img src="./assets/images/icons/store.png" alt="store">
+                        </div>
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Participating Stores
                         </h2>
@@ -332,40 +348,48 @@ include('arrays.php');
                 data-aos="fade-right"
                 data-aos-once="true"
             >
-                    <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
-                        <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 0 0 2-2V8H3v11a2 2 0 0 0 2 2z" />
-                            </svg>
+                <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                            <img src="./assets/images/icons/calendar.png" alt="calendar">
+                        </div>
+                        <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Promo Period, Schedule of Validation, Draw Date & Announcement of Winners
                         </h2>
                     </div>
+                </div>
 
-                    <div class="w-full mb-4">
-                        <div class="relative overflow-hidden rounded-xl bg-brand-red-50 border-2 border-brand-red-300 shadow-lg h-48 md:h-full flex items-center justify-center"> <img
-                                src="./assets/images/prizes.png"
-                                alt="Promo prizes"
-                                class="w-full h-full p-4 object-contain"
-                            />
-                        </div>
+                <div class="w-full mb-4">
+                    <div class="relative overflow-hidden rounded-xl bg-gray-50 border-2 border-gray-300 shadow-lg h-100 md:h-full flex items-center justify-center"> 
+                        <img
+                            src="./assets/images/prizes.png"
+                            alt="Promo prizes"
+                            class="w-full h-full p-2 object-contain"
+                        />
                     </div>
+                </div>
 
-                    <p class="mt-3 p-3 text-sm bg-brand-red-100 border-l-4 border-brand-red-700 text-brand-red-800 rounded-lg shadow-sm font-medium"> NOTE: Instant prize winners will be informed of their prize in real-time once the system has validated their entry
-                    </p>
+                <p class="mt-3 p-3 text-sm bg-brand-red-100 border-l-4 border-brand-red-700 text-brand-red-800 rounded-lg shadow-sm font-medium"> 
+                    NOTE: Instant prize winners will be informed of their prize in real-time once the system has validated their entry
+                </p>
             </section>
 
-            <section id="mechanics-list" class="space-y-8 sm:space-y-12"> <div
+            <section id="mechanics-list" class="space-y-8 sm:space-y-12"> 
+                <div
                     class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-2xl border-t-8 border-brand-red-700" data-aos="fade-up"
                     data-aos-delay="100"
                 >
-                    <h3
-                        class="text-xl sm:text-3xl font-extrabold text-brand-red-800 mb-6 flex items-center tracking-wide"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-red-700 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V8H3v11a2 2 0 002 2z" />
-                        </svg>
-                        How to Join
-                    </h3>
+                    <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                                <img src="./assets/images/icons/guide-book.png" alt="guide">
+                            </div>
+                            <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
+                                How to Join
+                            </h2>
+                        </div>
+                    </div>
+
                     <ol
                         class="space-y-4"
                     >
@@ -393,11 +417,9 @@ include('arrays.php');
                 >
                     <div class="flex items-start justify-between gap-4 mb-6 border-b border-brand-red-100 pb-3">
                         <div class="flex items-center gap-3">
-                            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-red-700 text-white shadow-lg flex-shrink-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                                </svg>
-                            </span>
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
+                                <img src="./assets/images/icons/gift-box.png" alt="gift-box">
+                            </div>
                             <div>
                                 <h3 id="prizes-heading" class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide">
                                     Prizes
@@ -412,7 +434,8 @@ include('arrays.php');
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> <article class="p-4 rounded-lg border border-gray-200 bg-brand-red-50 shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> 
+                        <article class="p-4 rounded-lg border border-gray-200 bg-brand-red-50 shadow-md">
                             <header class="flex items-center justify-between mb-2 p-1 rounded">
                                 <h4 class="text-base font-bold text-brand-red-800">Instant Prizes</h4>
                                 <span class="text-xs text-gray-600 font-medium">Real-time notification</span>
@@ -480,11 +503,19 @@ include('arrays.php');
                             </div>
                         </article>
 
-                        <article class="p-6 rounded-xl border-4 border-brand-red-500 bg-white shadow-xl col-span-1 md:col-span-2"> <header class="flex items-center justify-between mb-3">
-                                <h4 class="text-xl font-black text-brand-red-700 flex items-center gap-2">
-                                    <span class="text-3xl">🏆</span> MAJOR PRIZE (GRAND DRAW)
+                        <article class="p-6 rounded-xl border-4 border-cyan-500 bg-white shadow-xl col-span-1 md:col-span-2">
+                            <header class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 rounded px-2"> 
+
+                                <h4 class="text-xl font-black text-brand-red-700 flex items-center gap-2 mb-2 sm:mb-0"> 
+                                    <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0"> 
+                                        <img src="./assets/images/icons/success.png" alt="success">
+                                    </div>
+                                    MAJOR PRIZE (GRAND DRAW)
                                 </h4>
-                                <span class="text-sm bg-brand-red-700 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">Grand Prize</span>
+
+                                <span class="text-sm bg-brand-red-700 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                                    Grand Prize
+                                </span>
                             </header>
 
                             <div class="text-base text-gray-800 leading-relaxed">
@@ -506,10 +537,9 @@ include('arrays.php');
                     <h3
                         class="text-xl sm:text-3xl font-extrabold text-brand-red-800 mb-6 flex items-center tracking-wide"
                     >
-                        <span
-                            class="text-brand-red-700 mr-3 text-3xl font-extrabold"
-                            >⚖️</span
-                        >
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
+                            <img src="./assets/images/icons/balance.png" alt="balance">
+                        </div>
                         Determination of Winners
                     </h3>
 
@@ -534,7 +564,9 @@ include('arrays.php');
                 >
                     <div class="flex items-center justify-between mb-6 border-b border-brand-red-100 pb-3">
                         <h3 class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide flex items-center gap-3">
-                            <span class="text-brand-red-700 text-3xl">🏆</span>
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
+                                <img src="./assets/images/icons/trophy.png" alt="trophy">
+                            </div>
                             Announcement of Winners, Determination, and Claiming of Prizes
                         </h3>
                     </div>
@@ -544,7 +576,7 @@ include('arrays.php');
                             $title = isset($val['title']) ? $val['title'] : '';
                             $data_items = !empty($val['data']) && is_array($val['data']) ? $val['data'] : [];
                         ?>
-                            <article class="p-5 bg-brand-red-50 rounded-lg border border-brand-red-200 hover:shadow-lg transition duration-300">
+                            <article class="p-5 bg-cyan-50 rounded-lg border border-cyan-200 hover:shadow-lg transition duration-300">
                                 <div class="flex items-start gap-3">
                                     <div class="flex-shrink-0">
                                         <div class="w-10 h-10 rounded-full bg-brand-red-700 text-white font-bold text-lg flex items-center justify-center shadow-md">
@@ -553,7 +585,7 @@ include('arrays.php');
                                     </div>
 
                                     <div class="min-w-0">
-                                        <h4 class="text-base font-bold text-brand-red-800 mb-2">
+                                        <h4 class="text-base font-bold mb-2">
                                             <?php echo htmlspecialchars($title); ?>
                                         </h4>
 
@@ -577,21 +609,19 @@ include('arrays.php');
             <section
                 id="faq"
                 class="mt-16 sm:mt-20 p-6 bg-white rounded-xl shadow-2xl border border-red-200"
-                data-aos="flip-up"
+                data-aos="fade-up"
                 data-aos-duration="900"
                 role="region"
                 aria-labelledby="general-rules-heading"
             >
                 <div class="flex items-start gap-4 mb-6 border-b border-red-300 pb-3">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-brand-red-100 text-brand-red-700 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
+                        <img src="./assets/images/icons/performance.png" alt="performance">
                     </div>
 
                     <div>
                         <h3 id="general-rules-heading" class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide mb-1">
-                            ⚠️ Control Measures & Releases
+                            Control Measures & Releases
                         </h3>
                         <p class="text-sm text-gray-600">Please read carefully. These are the rules that govern validation, release and claims.</p>
                     </div>
@@ -599,13 +629,14 @@ include('arrays.php');
 
                 <ul role="list" class="grid gap-4 sm:gap-5">
                     <?php foreach($control_measures_arr as $num => $val) { ?>
-                        <li class="flex gap-4 items-start p-4 sm:p-5 bg-red-50 border border-red-200 rounded-lg shadow-inner"> <div class="flex-shrink-0">
+                        <li class="flex gap-4 items-start p-4 sm:p-5 bg-cyan-50 border border-cyan-200 rounded-lg shadow-inner">
+                            <div class="flex-shrink-0">
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-red-700 text-white font-bold shadow-md">
                                     <?php echo htmlspecialchars($num); ?>
                                 </span>
                             </div>
 
-                            <div class="text-sm sm:text-base text-brand-red-900 leading-relaxed font-medium flex-1">
+                            <div class="text-sm sm:text-base text-black-900 leading-relaxed font-medium flex-1">
                                 <?php echo nl2br(htmlspecialchars($val)); ?>
                             </div>
                         </li>
@@ -613,14 +644,14 @@ include('arrays.php');
                 </ul>
 
                 <p class="mt-4 text-sm text-gray-600">
-                    If you have questions about any control measure, contact <a href="mailto:contact@yourevent.com" class="text-brand-red-700 font-semibold underline hover:text-brand-red-900">contact@yourevent.com</a>.
+                    If you have questions about any control measure, contact <a href="mailto:contact@yourevent.com" class="text-blue-700 font-semibold underline hover:text-blue-900">marketing.digital@kojiesan.com</a>.
                 </p>
             </section>
 
-            <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-lg flex items-start gap-3 shadow-md" role="note" aria-label="Permit information"> <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-700 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10A8 8 0 0 0 4 12c0 6 8 10 8 10z" />
-                </svg>
+            <div class="mt-8 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-lg flex items-start gap-3 shadow-md" role="note" aria-label="Permit information"> 
+                <div class="flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0"> 
+                    <img src="./assets/images/icons/information.png" alt="infotmation">
+                </div>
 
                 <div class="text-sm text-gray-800">
                     Per <span class="font-bold">DOH-FDA CCHUHSRR</span> — <span class="font-extrabold text-blue-800">Permit No. 0799 s. 2025</span>
@@ -634,8 +665,8 @@ include('arrays.php');
                 &copy; 2025 BEVi. All rights reserved. | Contact us at
                 <a
                     href="mailto:contact@yourevent.com"
-                    class="text-brand-red-700 hover:text-brand-red-900 font-semibold transition"
-                    >contact@yourevent.com</a
+                    class="text-blue-700 hover:text-brand-red-900 font-semibold transition"
+                    >marketing.digital@kojiesan.com</a
                 >
             </div>
         </footer>
