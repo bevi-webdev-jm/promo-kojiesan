@@ -30,141 +30,22 @@ include('arrays.php');
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body class="font-sans bg-gray-50"> 
-        <header class="sticky top-0 left-0 right-0 bg-black w-full z-50 shadow-2xl"> 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <a href="#" class="flex items-center gap-3">
-                    <img
-                        src="./assets/images/bevi-logo-white.png"
-                        alt="kojie.san"
-                        class="h-10 w-auto"
-                    />
-                    <span class="hidden md:inline-block text-white text-xl sm:text-2xl font-black tracking-widest uppercase">
-                        HOLIDAY MILLIONAIRE
-                    </span>
-                    </a>
-
-                    <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-                    <a
-                        href="#criteria"
-                        class="text-gray-100 hover:text-white transition duration-200"
-                        >Criteria</a
-                    >
-                    <a
-                        href="#products"
-                        class="text-gray-100 hover:text-white transition duration-200"
-                        >Products</a
-                    >
-                    <a href="#stores" class="text-gray-100 hover:text-white transition duration-200"
-                        >Stores</a
-                    >
-                    <a href="#prizes" class="text-gray-100 hover:text-white transition duration-200"
-                        >Prizes</a
-                    >
-                    <a
-                        href="#mechanics-list"
-                        class="ml-2 inline-flex items-center px-4 py-2 bg-white text-brand-red-700 font-bold rounded-full shadow-lg transition hover:bg-brand-red-50 hover:text-brand-red-900 transform hover:scale-105" >
-                        Jump to Mechanics
-                    </a>
-                    </nav>
-
-                    <div class="md:hidden flex items-center">
-                        <button
-                            id="nav-toggle"
-                            aria-controls="mobile-menu"
-                            aria-expanded="false"
-                            class="p-2 rounded-md text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                        >
-                            <svg
-                            id="hamburger"
-                            class="h-6 w-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                            </svg>
-                            <svg
-                            id="close-icon"
-                            class="h-6 w-6 hidden"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"
-                            />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div
-            id="mobile-menu"
-            class="md:hidden bg-brand-red-900/95 border-t border-brand-red-700 hidden" >
-            <div class="px-4 pt-3 pb-4 space-y-2 font-medium">
-                <a
-                href="#criteria"
-                class="block text-gray-100 py-2 px-3 rounded hover:bg-white/10 transition"
-                >Criteria</a
-                >
-                <a
-                href="#products"
-                class="block text-gray-100 py-2 px-3 rounded hover:bg-white/10 transition"
-                >Products</a
-                >
-                <a
-                href="#stores"
-                class="block text-gray-100 py-2 px-3 rounded hover:bg-white/10 transition"
-                >Stores</a
-                >
-                <a
-                href="#prizes"
-                class="block text-gray-100 py-2 px-3 rounded hover:bg-white/10 transition"
-                >Prizes</a
-                >
-                <a
-                href="#mechanics-list"
-                class="block mt-2 px-3 py-2 bg-white text-brand-red-700 rounded-md text-center font-bold shadow transition hover:bg-red-50"
-                >Jump to Mechanics</a
-                >
-            </div>
-            </div>
-        </header>
+        <?php include_once('./header.php') ?>
 
         <!-- spacer to offset the fixed header height -->
         <div class="h-4"></div>
 
         <section id="terms-banner" class="mb-8 w-full" style="margin-top: -15px;"> 
-            <div class="w-full overflow-hidden bg-brand-red-700/50"> <img
-                    src="./assets/images/Terms & Conditions Header.png"
+            <div class="w-full overflow-hidden bg-brand-red-700/50 image-fader-container"> 
+                <img
+                    src="./assets/images/Terms & Conditions Header (3).png"
                     alt="Terms and Conditions header"
                     class="h-full w-full  object-cover object-center" />
             </div>
         </section>
         
-        <main class="max-w-4xl mx-auto pb-16 px-4 sm:px-6 lg:px-8"> 
-            <section
-                id="introduction"
-                class="mb-10 p-6 bg-gradient-to-r from-brand-red-700 to-brand-red-500 text-white rounded-xl shadow-2xl flex flex-col md:flex-row items-center gap-6 transform -translate-y-4" data-aos="fade-up"
-                data-aos-once="true"
-            >
-                <div class="mt-4 text-xs text-white/80">
-                    Promo Period: <strong class="text-white font-extrabold">Nov 15, 2025 — Jan 15, 2026</strong>
-                    <br>
-                    Countdown: <span id="timer" class="text-white font-extrabold"></span>
-                </div>
-            </section>
-                
+        <main class="max-w-6xl mx-auto pb-16 px-4 sm:px-6 lg:px-8"> 
+            
             <section
                 id="criteria"
                 class="mt-10 mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100" data-aos="fade-right"
@@ -308,90 +189,232 @@ include('arrays.php');
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
-                            Promo Period, Schedule of Validation, Draw Date & Announcement of Winners
+                            Prizes, Announcement of Winners and Claiming
                         </h2>
                     </div>
                 </div>
 
-                <!-- <div class="w-full mb-4">
-                    <div class="relative overflow-hidden rounded-xl bg-gray-50 border-2 border-gray-300 shadow-lg h-100 md:h-full flex items-center justify-center"> 
-                        <img
-                            src="./assets/images/prizes.png"
-                            alt="Promo prizes"
-                            class="w-full h-full p-2 object-contain"
-                        />
-                    </div>
-                </div> -->
+                <p class="mb-2 text-gray-700 font-semibold">
+                    Prizes are not convertible to cash and are non-transferable.
+                </p>
 
-                <div class="rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white">
+                <div class="rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white mb-2">
+                    <div class="md:hidden sticky top-0 left-0 right-0 z-40 bg-red-700 w-full shadow-lg">
+                        <h2 class="text-white px-6 py-2 text-xl font-extrabold text-center tracking-wider">
+                            INSTANT PRIZES
+                        </h2>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table role="table" class="min-w-full table-auto text-sm text-left text-gray-700">
                             <thead>
-                                <tr>
-                                    <th colspan="6" class="bg-red-700 text-white px-6 py-4 text-xl font-extrabold text-center tracking-wider">
-                                        GCASH INSTANT PRIZES
+                                <tr class="hidden md:table-row"> <th colspan="7" class="bg-red-700 text-white px-6 py-1 text-xl font-extrabold text-center tracking-wider">
+                                        INSTANT PRIZES
                                     </th>
                                 </tr>
                             </thead>
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200 text-center">
+                                    <th class="px-2 py-3 text-xs font-semibold text-gray-600">PRIZES</th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">NO. OF WINNERS</th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">PROMO PERIOD</th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">VALIDATION DATE</th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">DRAW DATE</th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">ANNOUNCEMENT DATE <small>(Social Media)</small></th>
+                                    <th class="px-2 py-2 text-xs font-semibold text-gray-600">CLAIMING/DELIVERY OF PIZES</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-xs">
+                                <tr class="hover:bg-red-50/40 transition">
+                                    <td class="px-2 py-3 text-center font-medium text-sm">
+                                        GCASH VOUCHER
+                                    </td>
+                                    <td class="px-2 py-0">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- 1,000 Winners of 50 php</li>
+                                            <li class=" whitespace-nowrap">- 1,000 Winners of 100 php</li>
+                                            <li class=" whitespace-nowrap">- 1,000 Winners of 200 php</li>
+                                            <li class=" whitespace-nowrap">- 1,000 Winners of 300 php</li>
+                                            <li class=" whitespace-nowrap">- 500 Winners of 500 php</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- November 15 - 30, 2025</li>
+                                            <li class=" whitespace-nowrap">- December 1 - 15, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 1 - 15, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- December 5, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 5, 2026</li>
+                                            <li class=" whitespace-nowrap">- January 19, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul class="list-disc list-outside ml-4 space-y-2">
+                                            <li>GCash vouchers will be distributed to winners via Messenger bot in the form of a voucher code.</li>
+                                            <li>Winners may redeem their voucher codes through the official GCash redemption page link.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-red-50/40 transition">
+                                    <td class="px-2 py-3 text-center font-medium text-sm">
+                                        ONLINE STORE ELECTRONIC DISCOUNT VOUCHER 
+                                    </td>
+                                    <td class="px-2 py-0">
+                                       1,500 winners of Shopee, Lazada, and TikTok Shop
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- November 15 - 30, 2025</li>
+                                            <li class=" whitespace-nowrap">- December 1 - 15, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 1 - 15, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- December 5, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 5, 2026</li>
+                                            <li class=" whitespace-nowrap">- January 19, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        Online store vouchers will be sent via the registered email or Messenger.
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-red-50/40 transition">
+                                    <td class="px-2 py-3 text-center font-medium text-sm">
+                                        KOJIE.SAN PRODUCTS
+                                    </td>
+                                    <td class="px-2 py-0">
+                                       1,000 winners of kojie.san products
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- November 15 - 30, 2025</li>
+                                            <li class=" whitespace-nowrap">- December 1 - 15, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 1 - 15, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3 whitespace-nowrap">
+                                        Real Time
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        <ul>
+                                            <li class=" whitespace-nowrap">- December 5, 2025</li>
+                                            <li class=" whitespace-nowrap">- January 5, 2026</li>
+                                            <li class=" whitespace-nowrap">- January 19, 2026</li>
+                                        </ul>
+                                    </td>
+                                    <td class="px-2 py-3">
+                                        BEVi products will be delivered to the winner’s registered delivery address. Before shipping, winners must sign an agreement stating that the brand is not liable for any damage, loss, or delay once the prize has been shipped out via courier.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                            <?php foreach($promo_period_arr as $title => $val) { ?>
-                                <!-- Group title -->
-                                <thead class="bg-white sticky top-0 z-10">
-                                    <tr>
-                                        <th colspan="6" class="bg-gray-50 sticky top-0 z-10 text-brand-red-700 text-center">
-                                            <?php echo htmlspecialchars($title); ?>
-                                        </th>
-                                    </tr>
+                <div class="rounded-xl border border-gray-200 shadow-xl overflow-hidden bg-white max-w-7xl mx-auto">
+                    <div class="md:hidden sticky top-0 left-0 right-0 z-40 bg-red-600 w-full shadow-lg">
+                        <h2 class="text-white px-6 py-3 text-xl font-bold text-center tracking-wider">
+                            GRAND PRIZE
+                        </h2>
+                    </div>
 
-                                    <!-- Column headers -->
-                                    <tr class="bg-gray-100 border-b border-gray-200">
-                                        <th class="px-4 py-3 text-xs font-semibold text-gray-600 whitespace-nowrap">Month No</th>
-                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">No. of Winners</th>
-                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Promo Period</th>
-                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Validation Date</th>
-                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Draw Date</th>
-                                        <th class="px-4 py-2 text-xs font-semibold text-gray-600 whitespace-nowrap">Announcement Date (Social)</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody class="divide-y divide-gray-100">
-                                    <?php foreach($val as $row) { ?>
-                                        <tr class="hover:bg-red-50/40 transition">
-                                            <td class="px-4 py-3 text-center font-medium text-sm"><?php echo htmlspecialchars($row['month']); ?></td>
-                                            <td class="px-4 py-3 text-center"><?php echo htmlspecialchars($row['winners']); ?></td>
-                                            <td class="px-4 py-3"><?php echo htmlspecialchars($row['period']); ?></td>
-                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['validation_date']); ?></td>
-                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['draw_date']); ?></td>
-                                            <td class="px-4 py-3 whitespace-nowrap"><?php echo htmlspecialchars($row['announcement_date']); ?></td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            <?php } ?>
-
-                            <!-- Grand prize footer -->
-                            <tfoot>
-                                <tr>
-                                    <th colspan="6" class="bg-blue-700 text-white px-4 py-3 text-lg text-center font-extrabold tracking-wider">
+                    <div class="overflow-x-auto">
+                        <table role="table" class="min-w-full table-auto text-sm text-gray-800 divide-y divide-gray-200">
+                            <thead>
+                                <tr class="hidden md:table-row">
+                                    <th colspan="8" class="bg-red-600 text-white px-6 py-3 text-2xl font-extrabold text-center tracking-wider">
                                         GRAND PRIZE
                                     </th>
                                 </tr>
-                                <tr class="bg-blue-50 border-t border-b border-blue-200">
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">No. of Winners</th>
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Promo Period</th>
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Validation Date</th>
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Draw Date</th>
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Announcement Date (Social)</th>
-                                    <th class="px-4 py-2 text-xs font-semibold text-gray-600">Notes</th>
+                            </thead>
+                            <thead>
+                                <tr class="bg-gray-100 border-b border-gray-200 text-center">
+                                    <th class="px-4 py-3 text-xs tracking-wider">PRIZES</th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">NO. OF WINNERS</th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">PROMO PERIOD</th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">VALIDATION DATE</th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">DRAW DATE</th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">ANNOUNCEMENT DATE <small>(Social Media)</small></th>
+                                    <th class="px-4 py-3 text-xs tracking-wider">CLAIMING/DELIVERY OF PRIZES</th>
                                 </tr>
-                                <tr class="bg-blue-50/80">
-                                    <td class="px-4 py-3 text-center font-bold">2</td>
-                                    <td class="px-4 py-3 text-center">Nov 1 - Jan 15</td>
-                                    <td class="px-4 py-3 text-center">16 Jan</td>
-                                    <td class="px-4 py-3 text-center">17 Jan</td>
-                                    <td class="px-4 py-3 text-center">17 Jan</td>
-                                    <td class="px-4 py-3 text-sm text-gray-600">Winners announced on official social channels</td>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 text-xs">
+                                <tr class="bg-white hover:bg-red-50 transition duration-150 ease-in-out">
+                                    <td class="px-4 py-4 text-center font-extrabold text-base text-red-600">
+                                        1,000,000 PHP (tax inclusive)
+                                    </td>
+                                    <td class="px-4 py-4 text-center font-semibold">
+                                        2 Winners
+                                    </td>
+                                    <td class="px-4 py-4 text-center">
+                                        November 15, 2025 - January 15, 2026
+                                    </td>
+                                    <td class="px-4 py-4 text-center whitespace-nowrap">
+                                        January 16, 2026
+                                    </td>
+                                    <td class="px-4 py-4 text-center whitespace-nowrap">
+                                        January 17, 2026
+                                    </td>
+                                    <td class="px-4 py-4 text-center">
+                                        January 19, 2026
+                                    </td>
+                                    <td class="px-4 py-4 text-left text-xs space-y-3">
+                                        <ul class="list-disc list-outside ml-4 space-y-2">
+                                            <li>
+                                                Winners first undergo verification by BEVi and Cognitive AI. Must submit:
+                                                <ul class="list-circle list-outside ml-6 mt-1 space-y-1">
+                                                    <li>• A valid government-issued ID</li>
+                                                    <li>• The registered proof of purchase used for entry</li>
+                                                </ul>
+                                                <p class="mt-1 italic text-gray-500">
+                                                    In cases where the original proof of purchase cannot be presented, BEVi may, at its sole discretion, accept a verified confirmation message (e.g., an official text message or Messenger conversation from the verified Kojie.san page) as supplementary proof of eligibility, provided that the authenticity of such communication can be validated by the brand.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                Upon successful verification, the prize will be processed and released in the form of a Manager’s Check within thirty (30) working days. The check will be issued in the winner’s name.
+                                            </li>
+                                            <li>
+                                                Winners must provide complete personal details and valid IDs for verification.
+                                            </li>
+                                            <li>
+                                                Verified winners must personally claim their prize at the BEVi Beauty Elements Ventures Inc. office in Makati City within thirty (30) days from receipt of official notification.
+                                            </li>
+                                            <li>
+                                                If the winner cannot claim in person, an authorized representative may do so on their behalf, provided with:
+                                                <ul class="list-circle list-outside ml-6 mt-1 space-y-1">
+                                                    <li>• A signed authorization letter</li>
+                                                    <li>• A photocopy of the winner’s valid ID</li>
+                                                    <li>• The representative’s valid ID</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Failure to claim the prize within sixty (60) calendar days from receipt of notification will result in forfeiture of the prize in favor of BEVi Beauty Elements Ventures Inc., subject to prior FDA approval.
+                                            </li>
+                                        </ul>
+                                    </td>
                                 </tr>
-                            </tfoot>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -432,123 +455,6 @@ include('arrays.php');
                     </ol>
                 </div>
 
-                <div
-                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                    role="region"
-                    aria-labelledby="prizes-heading"
-                >
-                    <div class="flex items-start justify-between gap-4 mb-6 border-b border-brand-red-100 pb-3">
-                        <div class="flex items-center gap-3">
-                            <div>
-                                <h3 id="prizes-heading" class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide">
-                                    Prizes
-                                </h3>
-                                <p class="text-sm text-gray-600">Prizes are not convertible to cash and are non-transferable.</p>
-                            </div>
-                        </div>
-
-                        <div class="text-sm text-gray-500 hidden sm:block pt-2">
-                            <span class="font-bold text-gray-800">Promo Rewards</span>
-                            <div class="mt-1 text-xs text-brand-red-600 font-medium">Instant, GCASH, Vouchers & Products</div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6"> 
-                        <article class="p-4 rounded-lg border border-gray-200 bg-brand-red-50 shadow-md">
-                            <header class="flex items-center justify-between mb-2 p-1 rounded">
-                                <h4 class="text-base font-bold text-brand-red-800">Instant Prizes</h4>
-                                <span class="text-xs text-gray-600 font-medium">Real-time notification</span>
-                            </header>
-
-                            <div class="text-sm text-gray-700 leading-relaxed">
-                                <?php if (!empty($prizes_arr['Instant Prizes'])): ?>
-                                    <p><?php echo nl2br(htmlspecialchars($prizes_arr['Instant Prizes'])); ?></p>
-                                <?php else: ?>
-                                    <p class="text-gray-500">No instant prize details available.</p>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-
-                        <article class="p-4 rounded-lg border border-gray-200 shadow-md">
-                            <header class="flex items-center justify-between mb-2 p-1 rounded">
-                                <h4 class="text-base font-bold text-brand-red-800">GCASH Vouchers</h4>
-                                <span class="text-xs bg-brand-red-100 text-brand-red-700 px-2 py-0.5 rounded-full font-medium">E-vouchers</span>
-                            </header>
-
-                            <?php if (!empty($prizes_arr['GCASH Vouchers']) && is_array($prizes_arr['GCASH Vouchers'])): ?>
-                                <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-                                    <?php foreach ($prizes_arr['GCASH Vouchers'] as $voucher): ?>
-                                        <li><?php echo htmlspecialchars($voucher); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            <?php else: ?>
-                                <p class="text-sm text-gray-500">No GCASH voucher details available.</p>
-                            <?php endif; ?>
-                        </article>
-
-                        <article class="p-4 rounded-lg border border-gray-200 shadow-md">
-                            <header class="flex items-center justify-between mb-2 p-1 rounded">
-                                <h4 class="text-base font-bold text-brand-red-800">BEVi PH Online Stores Voucher</h4>
-                                <span class="text-xs text-gray-600 font-medium">Discount vouchers</span>
-                            </header>
-
-                            <?php if (!empty($prizes_arr['BEVi PH Online Stores Electronic Discount Voucher']) && is_array($prizes_arr['BEVi PH Online Stores Electronic Discount Voucher'])): ?>
-                                <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-                                    <?php foreach ($prizes_arr['BEVi PH Online Stores Electronic Discount Voucher'] as $voucher): ?>
-                                        <li><?php echo htmlspecialchars($voucher); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            <?php else: ?>
-                                <p class="text-sm text-gray-500">No online store voucher details available.</p>
-                            <?php endif; ?>
-
-                            <p class="mt-3 text-xs bg-brand-red-100 border-l-4 border-brand-red-700 text-brand-red-800 rounded-lg p-2 font-medium">
-                                NOTE: these vouchers can only be used at BEVi PH online stores.
-                            </p>
-                        </article>
-
-                        <article class="p-4 rounded-lg border border-gray-200 bg-brand-red-50 shadow-md">
-                            <header class="flex items-center justify-between mb-2 p-1 rounded">
-                                <h4 class="text-base font-bold text-brand-red-800">BEVi Products</h4>
-                                <span class="text-xs text-gray-600 font-medium">Product prizes</span>
-                            </header>
-
-                            <div class="text-sm text-gray-700">
-                                <?php if (!empty($prizes_arr['BEVi Products'])): ?>
-                                    <p><?php echo nl2br(htmlspecialchars($prizes_arr['BEVi Products'])); ?></p>
-                                <?php else: ?>
-                                    <p class="text-gray-500">No product prize details available.</p>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-
-                        <article class="p-6 rounded-xl border-4 border-cyan-500 bg-white shadow-xl col-span-1 md:col-span-2">
-                            <header class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-3 rounded px-2"> 
-
-                                <h4 class="text-xl font-black text-brand-red-700 flex items-center gap-2 mb-2 sm:mb-0"> 
-                                    <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0"> 
-                                        <img src="./assets/images/icons/success.png" alt="success">
-                                    </div>
-                                    MAJOR PRIZE (GRAND DRAW)
-                                </h4>
-
-                                <span class="text-sm bg-brand-red-700 text-white px-3 py-1 rounded-full font-bold uppercase tracking-wider">
-                                    Grand Prize
-                                </span>
-                            </header>
-
-                            <div class="text-base text-gray-800 leading-relaxed">
-                                <?php if (!empty($prizes_arr['MAJOR PRIZE (Grand Draw)'])): ?>
-                                    <p><?php echo nl2br(htmlspecialchars($prizes_arr['MAJOR PRIZE (Grand Draw)'])); ?></p>
-                                <?php else: ?>
-                                    <p class="text-gray-500">Grand draw details will be posted soon.</p>
-                                <?php endif; ?>
-                            </div>
-                        </article>
-                    </div>
-                </div>
 
                 <div
                     class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
@@ -575,50 +481,6 @@ include('arrays.php');
                     </ul>
                 </div>
 
-                <div
-                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                >
-                    <div class="flex items-center justify-between mb-6 border-b border-brand-red-100 pb-3">
-                        <h3 class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide flex items-center gap-3">
-                            Announcement of Winners, Determination, and Claiming of Prizes
-                        </h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <?php foreach($announcement_of_winners_arr as $num => $val) {
-                            $title = isset($val['title']) ? $val['title'] : '';
-                            $data_items = !empty($val['data']) && is_array($val['data']) ? $val['data'] : [];
-                        ?>
-                            <article class="p-5 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition duration-300">
-                                <div class="flex items-start gap-3">
-                                    <div class="flex-shrink-0">
-                                        <div class="w-10 h-10 rounded-full bg-brand-red-700 text-white font-bold text-lg flex items-center justify-center shadow-md">
-                                            <?php echo htmlspecialchars($num); ?>
-                                        </div>
-                                    </div>
-
-                                    <div class="min-w-0">
-                                        <h4 class="text-base font-bold mb-2">
-                                            <?php echo htmlspecialchars($title); ?>
-                                        </h4>
-
-                                        <?php if ($data_items): ?>
-                                            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-                                                <?php foreach ($data_items as $d) { ?>
-                                                    <li><?php echo htmlspecialchars($d); ?></li>
-                                                <?php } ?>
-                                            </ul>
-                                        <?php else: ?>
-                                            <p class="text-xs text-gray-500">No additional details available.</p>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            </article>
-                        <?php } ?>
-                    </div>
-                </div>
             </section>
 
             <section
@@ -671,17 +533,7 @@ include('arrays.php');
             </div>
         </main>
 
-        <footer class="bg-gray-200 mt-16 border-t border-brand-red-300"> <div
-                class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8 text-center text-gray-700 text-sm font-medium"
-            >
-                &copy; 2025 BEVi. All rights reserved. | Contact us at
-                <a
-                    href="mailto:contact@yourevent.com"
-                    class="text-blue-700 hover:text-brand-red-900 font-semibold transition"
-                    >marketing.digital@kojiesan.com</a
-                >
-            </div>
-        </footer>
+        <?php include_once('./footer.php'); ?>
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="./assets/js/app.js"></script>

@@ -38,49 +38,49 @@ tailwind.config = {
     });
 })();
 
-// Countdown Timer Functionality
-function updateCountdown() {
-    const now = new Date();
-    const startDate = new Date(2025, 10, 15, 0, 0, 0); // November 15, 2025, 12:00 AM
-    const endDate = new Date(2026, 0, 15, 23, 59, 59); // January 15, 2026, 11:59 PM
+// // Countdown Timer Functionality
+// function updateCountdown() {
+//     const now = new Date();
+//     const startDate = new Date(2025, 10, 15, 0, 0, 0); // November 15, 2025, 12:00 AM
+//     const endDate = new Date(2026, 0, 15, 23, 59, 59); // January 15, 2026, 11:59 PM
 
-    let targetDate;
-    let messagePrefix;
+//     let targetDate;
+//     let messagePrefix;
 
-    if (now < startDate) {
-        targetDate = startDate;
-        messagePrefix = "Promo Starts In: ";
-    } else if (now < endDate) {
-        targetDate = endDate;
-        messagePrefix = "Promo Ends In: ";
-    } else {
-        document.getElementById("timer").textContent = "Promo Ended";
-        return;
-    }
+//     if (now < startDate) {
+//         targetDate = startDate;
+//         messagePrefix = "Promo Starts In: ";
+//     } else if (now < endDate) {
+//         targetDate = endDate;
+//         messagePrefix = "Promo Ends In: ";
+//     } else {
+//         document.getElementById("timer").textContent = "Promo Ended";
+//         return;
+//     }
 
-    const timeRemaining = targetDate - now;
+//     const timeRemaining = targetDate - now;
 
-    if (timeRemaining > 0) {
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-            (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+//     if (timeRemaining > 0) {
+//         const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor(
+//             (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+//         );
+//         const minutes = Math.floor(
+//             (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+//         );
+//         const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-        document.getElementById(
-            "timer"
-        ).textContent = `${messagePrefix}${days}d ${hours}h ${minutes}m ${seconds}s`;
-    } else {
-        document.getElementById("timer").textContent = "Promo Ended";
-    }
-}
+//         document.getElementById(
+//             "timer"
+//         ).textContent = `${messagePrefix}${days}d ${hours}h ${minutes}m ${seconds}s`;
+//     } else {
+//         document.getElementById("timer").textContent = "Promo Ended";
+//     }
+// }
 
-// Update countdown every second
-setInterval(updateCountdown, 1000);
-updateCountdown(); // Initial call
+// // Update countdown every second
+// setInterval(updateCountdown, 1000);
+// updateCountdown(); // Initial call
 
 (function () {
     const input = document.getElementById("product-search");
