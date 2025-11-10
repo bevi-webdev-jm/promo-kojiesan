@@ -30,82 +30,82 @@ include('arrays.php');
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body class="font-sans bg-gray-50"> 
-        <header class="sticky top-0 left-0 right-0 bg-brand-red-800 w-full z-50 shadow-2xl"> 
+        <header class="sticky top-0 left-0 right-0 bg-black w-full z-50 shadow-2xl"> 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="#" class="flex items-center gap-3">
-                <img
-                    src="./assets/images/bevi-logo-white.png"
-                    alt="kojie.san"
-                    class="h-10 w-auto"
-                />
-                <span class="hidden md:inline-block text-white text-xl sm:text-2xl font-black tracking-widest uppercase">
-                    HOLIDAY MILLIONAIRE
-                </span>
-                </a>
-
-                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-                <a
-                    href="#criteria"
-                    class="text-gray-100 hover:text-white transition duration-200"
-                    >Criteria</a
-                >
-                <a
-                    href="#products"
-                    class="text-gray-100 hover:text-white transition duration-200"
-                    >Products</a
-                >
-                <a href="#stores" class="text-gray-100 hover:text-white transition duration-200"
-                    >Stores</a
-                >
-                <a href="#prizes" class="text-gray-100 hover:text-white transition duration-200"
-                    >Prizes</a
-                >
-                <a
-                    href="#mechanics-list"
-                    class="ml-2 inline-flex items-center px-4 py-2 bg-white text-brand-red-700 font-bold rounded-full shadow-lg transition hover:bg-brand-red-50 hover:text-brand-red-900 transform hover:scale-105" >
-                    Jump to Mechanics
-                </a>
-                </nav>
-
-                <div class="md:hidden flex items-center">
-                <button
-                    id="nav-toggle"
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
-                    class="p-2 rounded-md text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-                >
-                    <svg
-                    id="hamburger"
-                    class="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
+                <div class="flex items-center justify-between h-16">
+                    <a href="#" class="flex items-center gap-3">
+                    <img
+                        src="./assets/images/bevi-logo-white.png"
+                        alt="kojie.san"
+                        class="h-10 w-auto"
                     />
-                    </svg>
-                    <svg
-                    id="close-icon"
-                    class="h-6 w-6 hidden"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                    <span class="hidden md:inline-block text-white text-xl sm:text-2xl font-black tracking-widest uppercase">
+                        HOLIDAY MILLIONAIRE
+                    </span>
+                    </a>
+
+                    <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a
+                        href="#criteria"
+                        class="text-gray-100 hover:text-white transition duration-200"
+                        >Criteria</a
                     >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                    />
-                    </svg>
-                </button>
+                    <a
+                        href="#products"
+                        class="text-gray-100 hover:text-white transition duration-200"
+                        >Products</a
+                    >
+                    <a href="#stores" class="text-gray-100 hover:text-white transition duration-200"
+                        >Stores</a
+                    >
+                    <a href="#prizes" class="text-gray-100 hover:text-white transition duration-200"
+                        >Prizes</a
+                    >
+                    <a
+                        href="#mechanics-list"
+                        class="ml-2 inline-flex items-center px-4 py-2 bg-white text-brand-red-700 font-bold rounded-full shadow-lg transition hover:bg-brand-red-50 hover:text-brand-red-900 transform hover:scale-105" >
+                        Jump to Mechanics
+                    </a>
+                    </nav>
+
+                    <div class="md:hidden flex items-center">
+                        <button
+                            id="nav-toggle"
+                            aria-controls="mobile-menu"
+                            aria-expanded="false"
+                            class="p-2 rounded-md text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                        >
+                            <svg
+                            id="hamburger"
+                            class="h-6 w-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                            </svg>
+                            <svg
+                            id="close-icon"
+                            class="h-6 w-6 hidden"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"
+                            />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <div
@@ -158,56 +158,19 @@ include('arrays.php');
                 class="mb-10 p-6 bg-gradient-to-r from-brand-red-700 to-brand-red-500 text-white rounded-xl shadow-2xl flex flex-col md:flex-row items-center gap-6 transform -translate-y-4" data-aos="fade-up"
                 data-aos-once="true"
             >
-                <div class="flex-1">
-                    <span class="inline-block bg-white/30 text-white text-xs px-3 py-1 rounded-full font-bold uppercase mb-3 tracking-wider">
-                        Official Promo
-                    </span>
-
-                    <h1 class="text-3xl sm:text-4xl font-black leading-tight mb-3"> KOJIE.SAN: HOLIDAY MILLIONAIRE
-                    </h1>
-
-                    <p class="text-sm sm:text-base text-white/90 mb-5"> Win daily GCash vouchers and BEVi products — plus two grand prize winners of
-                        ₱1,000,000 each.
-                    </p>
-
-                    <div class="flex flex-wrap gap-3">
-                        <a
-                            href="#mechanics-list"
-                            class="inline-flex items-center px-5 py-2 bg-white text-brand-red-700 rounded-full font-bold shadow-lg transition hover:bg-white/90 transform hover:scale-105" >
-                            Jump to Mechanics
-                        </a>
-                        <a
-                            href="#prizes"
-                            class="inline-flex items-center px-5 py-2 border-2 border-white/70 text-white rounded-full font-semibold hover:bg-white/20 transition" >
-                            See Prizes
-                        </a>
-                    </div>
-
-                    <div class="mt-4 text-xs text-white/80">
-                        Promo Period: <strong class="text-white font-extrabold">Nov 15, 2025 — Jan 15, 2026</strong>
-                        <br>
-                        Countdown: <span id="timer" class="text-white font-extrabold"></span>
-                    </div>
-                </div>
-
-                <div class="w-90 h-40 md:w-80 md:h-56 flex-shrink-0 opacity-80"> <img
-                        src="./assets/images/Terms & Conditions Header.png"
-                        alt="Holiday Millionaire illustration"
-                        class="w-full h-full object-contain"
-                    />
+                <div class="mt-4 text-xs text-white/80">
+                    Promo Period: <strong class="text-white font-extrabold">Nov 15, 2025 — Jan 15, 2026</strong>
+                    <br>
+                    Countdown: <span id="timer" class="text-white font-extrabold"></span>
                 </div>
             </section>
                 
             <section
                 id="criteria"
-                class="mt-10 mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100" data-aos="fade-right"
+                class="mt-10 mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100" data-aos="fade-right"
                 data-aos-once="true"
             >
-                <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3"> 
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                        <img src="./assets/images/icons/criteria.png" alt="criteria">
-                    </div>
-
+                <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                         Participation Criteria
                     </h2>
@@ -231,15 +194,12 @@ include('arrays.php');
 
             <section
                 id="products"
-                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100"
+                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100"
                 data-aos="fade-right"
                 data-aos-once="true"
             >
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                            <img src="./assets/images/icons/box.png" alt="products">
-                        </div>
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Participating Products
                         </h2>
@@ -288,19 +248,14 @@ include('arrays.php');
                 </div>
             </section>
 
-            
-
             <section
                 id="stores"
-                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100"
+                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100"
                 data-aos="fade-right"
                 data-aos-once="true"
             >
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                            <img src="./assets/images/icons/store.png" alt="store">
-                        </div>
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Participating Stores
                         </h2>
@@ -346,15 +301,12 @@ include('arrays.php');
 
             <section
                 id="prizes"
-                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-xl border border-gray-100"
+                class="mb-12 sm:mb-16 p-6 sm:p-8 bg-white rounded-xl shadow-lg border border-gray-100"
                 data-aos="fade-right"
                 data-aos-once="true"
             >
                 <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                     <div class="flex items-center gap-3">
-                        <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                            <img src="./assets/images/icons/calendar.png" alt="calendar">
-                        </div>
                         <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                             Promo Period, Schedule of Validation, Draw Date & Announcement of Winners
                         </h2>
@@ -456,9 +408,6 @@ include('arrays.php');
                 >
                     <div class="flex items-center gap-4 mb-6 border-b border-brand-red-100 pb-3">
                         <div class="flex items-center gap-3">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                                <img src="./assets/images/icons/guide-book.png" alt="guide">
-                            </div>
                             <h2 class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide">
                                 How to Join
                             </h2>
@@ -484,7 +433,7 @@ include('arrays.php');
                 </div>
 
                 <div
-                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-2xl border-t-8 border-brand-red-700"
+                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
                     data-aos="fade-up"
                     data-aos-delay="200"
                     role="region"
@@ -492,9 +441,6 @@ include('arrays.php');
                 >
                     <div class="flex items-start justify-between gap-4 mb-6 border-b border-brand-red-100 pb-3">
                         <div class="flex items-center gap-3">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-full flex-shrink-0"> 
-                                <img src="./assets/images/icons/gift-box.png" alt="gift-box">
-                            </div>
                             <div>
                                 <h3 id="prizes-heading" class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide">
                                     Prizes
@@ -605,16 +551,13 @@ include('arrays.php');
                 </div>
 
                 <div
-                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-2xl border-t-8 border-brand-red-700"
+                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
                     data-aos="fade-up"
                     data-aos-delay="300"
                 >
                     <h3
                         class="text-xl sm:text-3xl font-extrabold text-brand-red-800 mb-6 flex items-center tracking-wide"
                     >
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
-                            <img src="./assets/images/icons/balance.png" alt="balance">
-                        </div>
                         Determination of Winners
                     </h3>
 
@@ -633,15 +576,12 @@ include('arrays.php');
                 </div>
 
                 <div
-                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-2xl border-t-8 border-brand-red-700"
+                    class="mechanic-card bg-white p-6 sm:p-8 rounded-xl shadow-lg border-t-8 border-brand-red-700"
                     data-aos="fade-up"
                     data-aos-delay="400"
                 >
                     <div class="flex items-center justify-between mb-6 border-b border-brand-red-100 pb-3">
                         <h3 class="text-xl sm:text-3xl font-extrabold text-brand-red-800 tracking-wide flex items-center gap-3">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
-                                <img src="./assets/images/icons/trophy.png" alt="trophy">
-                            </div>
                             Announcement of Winners, Determination, and Claiming of Prizes
                         </h3>
                     </div>
@@ -651,7 +591,7 @@ include('arrays.php');
                             $title = isset($val['title']) ? $val['title'] : '';
                             $data_items = !empty($val['data']) && is_array($val['data']) ? $val['data'] : [];
                         ?>
-                            <article class="p-5 bg-cyan-50 rounded-lg border border-cyan-200 hover:shadow-lg transition duration-300">
+                            <article class="p-5 bg-gray-50 rounded-lg border border-gray-200 hover:shadow-lg transition duration-300">
                                 <div class="flex items-start gap-3">
                                     <div class="flex-shrink-0">
                                         <div class="w-10 h-10 rounded-full bg-brand-red-700 text-white font-bold text-lg flex items-center justify-center shadow-md">
@@ -683,16 +623,13 @@ include('arrays.php');
 
             <section
                 id="faq"
-                class="mt-16 sm:mt-20 p-6 bg-white rounded-xl shadow-2xl border border-red-200"
+                class="mt-16 sm:mt-20 p-6 bg-white rounded-xl shadow-lg border border-red-200"
                 data-aos="fade-up"
                 data-aos-duration="900"
                 role="region"
                 aria-labelledby="general-rules-heading"
             >
                 <div class="flex items-start gap-4 mb-6 border-b border-red-300 pb-3">
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 mr-1"> 
-                        <img src="./assets/images/icons/performance.png" alt="performance">
-                    </div>
 
                     <div>
                         <h3 id="general-rules-heading" class="text-xl sm:text-3xl font-extrabold text-brand-red-700 tracking-wide mb-1">
@@ -704,7 +641,7 @@ include('arrays.php');
 
                 <ul role="list" class="grid gap-4 sm:gap-5">
                     <?php foreach($control_measures_arr as $num => $val) { ?>
-                        <li class="flex gap-4 items-start p-4 sm:p-5 bg-cyan-50 border border-cyan-200 rounded-lg shadow-inner">
+                        <li class="flex gap-4 items-start p-4 sm:p-5 bg-gray-50 border border-gray-200 rounded-lg shadow-inner">
                             <div class="flex-shrink-0">
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-red-700 text-white font-bold shadow-md">
                                     <?php echo htmlspecialchars($num); ?>

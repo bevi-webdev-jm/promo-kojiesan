@@ -174,8 +174,8 @@ $determination_winners_arr = [
     3 => 'All entries will be screened by BEVi Beauty Elements Inc., BEVi Asia Pacific’s in-house Digital Marketing Team, and Cognitive AI Philippines.',
     4 => 'An electronic raffle draw system will be opened for all qualified entries for Instant Gcash, BEVi Products, and Grand Prize winners.',
     5 => 'Representatives from BEVi or partners shall be present during the determination of winners.',
-    6 => 'Raffle Draw Winners can win multiple times during the three (3) months promo period and still have a chance to win the grand prize.',
-    7 => 'A total of eight thousand, two (8,002) winners will be selected as winners during the three (3) month promo period.',
+    6 => 'Raffle Draw Winners can win multiple times during the two (2) months promo period and still have a chance to win the grand prize.',
+    7 => 'A total of eight thousand, two (7,002) winners will be selected as winners during the two (2) month promo period.',
 ];
 
 $announcement_of_winners_arr = [
