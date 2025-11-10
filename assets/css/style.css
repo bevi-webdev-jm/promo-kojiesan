@@ -1,46 +1,24 @@
 body {
-    /* Background Image Setup */
     background-image: url("/assets/images/bg.jpg");
-    /* Ensure the image is fixed in the viewport, preventing movement 
-       when content scrolls over the glass effect */
     background-attachment: fixed;
-    /* Ensure the image always covers the entire viewport */
     background-size: cover;
-    /* Center the background image */
     background-position: center;
-    /* Do not repeat the image (as 'cover' makes repeat unnecessary) */
     background-repeat: no-repeat;
 
-    /* Layout */
-    /* Ensure the body always takes up the full height of the viewport */
     min-height: 100vh;
-    /* Reset margins for consistent full-screen display */
     margin: 0;
-
-    /* Glass Effect (This only works on elements *behind* the body) */
-    /* backdrop-filter: blur(15px);  <-- REMOVED from body */
 }
 
-/* 🎨 Correction for Glass Effect 
-   backdrop-filter MUST be applied to an element *in front of* the background, 
-   not the body itself, to blur the background image. We use a fixed pseudo-element 
-   to achieve this. This element will house the "glass."
-*/
 body::before {
     content: "";
-    /* Position fixed to cover the entire viewport, even on scroll */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Apply the glass-like blur filter */
     backdrop-filter: blur(15px);
-    /* Add a semi-transparent white/light color for a typical glass appearance */
     background-color: rgba(255, 255, 255, 0.1);
-    /* Optional: Add a subtle inner shadow/border for depth */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
-    /* Place it behind the main content */
     z-index: -1;
 }
 
@@ -211,9 +189,8 @@ header .text-white {
     mask-image: linear-gradient(
         to bottom,
         black 0%,
-        /* Top of the image is fully visible */ black 95%,
-        /* Image remains fully visible up to 80% of its height */ transparent
-            100% /* Fades to fully transparent at the bottom */
+        black 95%,
+        transparent 100%
     );
     /* For broader browser compatibility */
     -webkit-mask-image: linear-gradient(
