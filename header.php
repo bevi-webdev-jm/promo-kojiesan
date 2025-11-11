@@ -35,7 +35,7 @@
                     >Mechanics</a
                 >
                 <a
-                    href="/privacy-policy"
+                    href="./privacy-policy.php"
                     class="ml-2 inline-flex items-center px-4 py-2 bg-white text-brand-red-700 font-bold rounded-full shadow-lg transition hover:bg-brand-red-50 hover:text-brand-red-900 transform hover:scale-105" >
                     Privacy Policy
                 </a>
@@ -100,7 +100,7 @@
             <a href="#mechanics-list" class="block text-gray-100 py-2 px-3 rounded hover:bg-white/10 transition">
                 Mechanics
             </a>
-            <a href="/privacy-policy" class="block mt-2 px-3 py-2 bg-white text-brand-red-700 rounded-md text-center font-bold shadow transition hover:bg-red-50" >
+            <a href="./privacy-policy.php" class="block mt-2 px-3 py-2 bg-white text-brand-red-700 rounded-md text-center font-bold shadow transition hover:bg-red-50" >
                 Privacy Policy
             </a>
         </div>
